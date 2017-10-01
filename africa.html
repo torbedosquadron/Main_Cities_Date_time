@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Zone Viewer</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+	<script type="text/javascript" src="assets/scripts/date.js"></script>
+	<script type='text/javascript' src='assets/scripts/core.js'></script>
+    <script type='text/javascript' src='assets/scripts/parser.js'></script>
+    <script type='text/javascript' src='assets/scripts/en-US.js'></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</head>
+<body>
+	<div id="main-content">
+		<h1>Africa Main Cities</h1>
+		<p class="navi"><a href="index.html"> Main Page </a></p>
+	</div><!--main-content-->
+	<div id="main-content">
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Morocco.png" width="40px" height="25px">
+		<p class="city"> Casablanca</p>
+		<p class="country">, Morocco</p>
+		<div class="dt">
+			<h2 id="Casablanca_T_VA"></h2>
+			<p id="Casablanca_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Algeria.png" width="40px" height="25px">
+		<p class="city"> Algiera</p>
+		<p class="country">, Algiera</p>
+		<div class="dt">
+			<h2 id="Algiera_T_VA"></h2>
+			<p id="Algiera_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Nigeria.png" width="40px" height="25px">
+		<p class="city"> Lagos</p>
+		<p class="country">, Nigeria</p>
+		<div class="dt">
+			<h2 id="Lagos_T_VA"></h2>
+			<p id="Lagos_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Democratic_Congo.png" width="40px" height="25px">
+		<p class="city"> Kinshasa</p>
+		<p class="country">, Democratic Congo</p>
+		<div class="dt">
+			<h2 id="Kinshasa_T_VA"></h2>
+			<p id="Kinshasa_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa
+		/South_Africa.png" width="40px" height="25px">
+		<p class="city"> Johannesburg</p>
+		<p class="country">, South Africa</p>
+		<div class="dt">
+			<h2 id="Johannesburg_T_VA"></h2>
+			<p id="Johannesburg_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa
+		/Sudan.png" width="40px" height="25px">
+		<p class="city"> Khartoum</p>
+		<p class="country">, Sudan</p>
+		<div class="dt">
+			<h2 id="Khartoum_T_VA"></h2>
+			<p id="Khartoum_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Ghana.png" width="40px" height="25px">
+		<p class="city"> Accra</p>
+		<p class="country">, Ghana</p>
+		<div class="dt">
+			<h2 id="Accra_T_VA"></h2>
+			<p id="Accra_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/africa/Kenya.png" width="40px" height="25px">
+		<p class="city"> Nairobi</p>
+		<p class="country">, Kenya</p>
+		<div class="dt">
+			<h2 id="Nairobi_T_VA"></h2>
+			<p id="Nairobi_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	</div><!--main_content-->
+	<script type="text/javascript">
+function tick() {
+	var unix_time = Date.now();
+	var current_time = new Date();
+	var diff = current_time.getTimezoneOffset();
+	var diff_miliseconds = diff*60*1000;
+	var current_utc = unix_time + diff_miliseconds;
+
+var Casablanca_T_VA= document.getElementById("Casablanca_T_VA");
+var Casablanca_D_VA= document.getElementById("Casablanca_D_VA");
+var Casablanca_CT = current_utc + (0*60*60*1000);
+var Casablanca_Time = new Date(Casablanca_CT).toString('hh:mm:ss tt');
+var Casablanca_Date = new Date(Casablanca_CT).toString('ddd, d MMM yyyy');
+Casablanca_T_VA.innerHTML = Casablanca_Time; 
+Casablanca_D_VA.innerHTML = Casablanca_Date; 
+
+
+var Algiera_T_VA= document.getElementById("Algiera_T_VA");
+var Algiera_D_VA= document.getElementById("Algiera_D_VA");
+var Algiera_CT = current_utc + (1*60*60*1000);
+var Algiera_Time = new Date(Algiera_CT).toString('hh:mm:ss tt');
+var Algiera_Date = new Date(Algiera_CT).toString('ddd, d MMM yyyy');
+Algiera_T_VA.innerHTML = Algiera_Time; 
+Algiera_D_VA.innerHTML = Algiera_Date; 
+
+
+var Lagos_T_VA= document.getElementById("Lagos_T_VA");
+var Lagos_D_VA= document.getElementById("Lagos_D_VA");
+var Lagos_CT = current_utc + (1*60*60*1000);
+var Lagos_Time = new Date(Lagos_CT).toString('hh:mm:ss tt');
+var Lagos_Date = new Date(Lagos_CT).toString('ddd, d MMM yyyy');
+Lagos_T_VA.innerHTML = Lagos_Time; 
+Lagos_D_VA.innerHTML = Lagos_Date;
+
+
+var Kinshasa_T_VA= document.getElementById("Kinshasa_T_VA");
+var Kinshasa_D_VA= document.getElementById("Kinshasa_D_VA");
+var Kinshasa_CT = current_utc + (1*60*60*1000);
+var Kinshasa_Time = new Date(Kinshasa_CT).toString('hh:mm:ss tt');
+var Kinshasa_Date = new Date(Kinshasa_CT).toString('ddd, d MMM yyyy');
+Kinshasa_T_VA.innerHTML = Kinshasa_Time; 
+Kinshasa_D_VA.innerHTML = Kinshasa_Date;
+
+var Johannesburg_T_VA= document.getElementById("Johannesburg_T_VA");
+var Johannesburg_D_VA= document.getElementById("Johannesburg_D_VA");
+var Johannesburg_CT = current_utc + (2*60*60*1000);
+var Johannesburg_Time = new Date(Johannesburg_CT).toString('hh:mm:ss tt');
+var Johannesburg_Date = new Date(Johannesburg_CT).toString('ddd, d MMM yyyy');
+Johannesburg_T_VA.innerHTML = Johannesburg_Time; 
+Johannesburg_D_VA.innerHTML = Johannesburg_Date;
+
+var Khartoum_T_VA= document.getElementById("Khartoum_T_VA");
+var Khartoum_D_VA= document.getElementById("Khartoum_D_VA");
+var Khartoum_CT = current_utc + (3*60*60*1000);
+var Khartoum_Time = new Date(Khartoum_CT).toString('hh:mm:ss tt');
+var Khartoum_Date = new Date(Khartoum_CT).toString('ddd, d MMM yyyy');
+Khartoum_T_VA.innerHTML = Khartoum_Time; 
+Khartoum_D_VA.innerHTML = Khartoum_Date;
+
+
+var Accra_T_VA= document.getElementById("Accra_T_VA");
+var Accra_D_VA= document.getElementById("Accra_D_VA");
+var Accra_CT = current_utc + (0*60*60*1000);
+var Accra_Time = new Date(Accra_CT).toString('hh:mm:ss tt');
+var Accra_Date = new Date(Accra_CT).toString('ddd, d MMM yyyy');
+Accra_T_VA.innerHTML = Accra_Time; 
+Accra_D_VA.innerHTML = Accra_Date;
+
+
+var Nairobi_T_VA= document.getElementById("Nairobi_T_VA");
+var Nairobi_D_VA= document.getElementById("Nairobi_D_VA");
+var Nairobi_CT = current_utc + (3*60*60*1000);
+var Nairobi_Time = new Date(Nairobi_CT).toString('hh:mm:ss tt');
+var Nairobi_Date = new Date(Nairobi_CT).toString('ddd, d MMM yyyy');
+Nairobi_T_VA.innerHTML = Nairobi_Time; 
+Nairobi_D_VA.innerHTML = Nairobi_Date;
+}
+
+	function get_current_time() {
+		 setInterval(tick, 1000);
+	}
+
+	window.onload = function () {
+		get_current_time();
+	};
+	</script>
+</body>
+</html>

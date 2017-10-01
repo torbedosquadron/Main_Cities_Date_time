@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Zone Viewer</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+	<script type="text/javascript" src="assets/scripts/date.js"></script>
+	<script type='text/javascript' src='assets/scripts/core.js'></script>
+    <script type='text/javascript' src='assets/scripts/parser.js'></script>
+    <script type='text/javascript' src='assets/scripts/en-US.js'></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</head>
+<body>
+	<div id="main-content">
+		<h1>Australia Main Cities</h1>
+		<p class="navi"><a href="index.html"> Main Page </a></p>
+	</div><!--main-content-->
+	<div id="main-content">
+	<div class="city_time_zone">
+		<img src="assets/images/australia/australia.png" width="40px" height="25px">
+		<p class="city"> Darwin</p>
+		<p class="country">, Australia</p>
+		<div class="dt">
+			<h2 id="Darwin_T_VA"></h2>
+			<p id="Darwin_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/australia/australia.png" width="40px" height="25px">
+		<p class="city"> Perth</p>
+		<p class="country">, Australia</p>
+		<div class="dt">
+			<h2 id="Perth_T_VA"></h2>
+			<p id="Perth_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+
+	</div><!--main_content-->
+	<script type="text/javascript">
+function tick() {
+	var unix_time = Date.now();
+	var current_time = new Date();
+	var diff = current_time.getTimezoneOffset();
+	var diff_miliseconds = diff*60*1000;
+	var current_utc = unix_time + diff_miliseconds;
+
+var Darwin_T_VA= document.getElementById("Darwin_T_VA");
+var Darwin_D_VA= document.getElementById("Darwin_D_VA");
+var Darwin_CT = current_utc + (9.5*60*60*1000);
+var Darwin_Time = new Date(Darwin_CT).toString('hh:mm:ss tt');
+var Darwin_Date = new Date(Darwin_CT).toString('ddd, d MMM yyyy');
+Darwin_T_VA.innerHTML = Darwin_Time; 
+Darwin_D_VA.innerHTML = Darwin_Date; 
+
+
+var Perth_T_VA= document.getElementById("Perth_T_VA");
+var Perth_D_VA= document.getElementById("Perth_D_VA");
+var Perth_CT = current_utc + (8*60*60*1000);
+var Perth_Time = new Date(Perth_CT).toString('hh:mm:ss tt');
+var Perth_Date = new Date(Perth_CT).toString('ddd, d MMM yyyy');
+Perth_T_VA.innerHTML = Perth_Time; 
+Perth_D_VA.innerHTML = Perth_Date; 
+
+}
+
+	function get_current_time() {
+		 setInterval(tick, 1000);
+	}
+
+	window.onload = function () {
+		get_current_time();
+	};
+	</script>
+</body>
+</html>

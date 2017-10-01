@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Cities Date & Time</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+	<script type="text/javascript" src="assets/scripts/date.js"></script>
+	<script type='text/javascript' src='assets/scripts/core.js'></script>
+    <script type='text/javascript' src='assets/scripts/parser.js'></script>
+    <script type='text/javascript' src='assets/scripts/en-US.js'></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</head>
+<body>
+	<div id="main-content">
+		<h1>Europe Main Cities</h1>
+		<p class="navi"><a href="index.html"> Main Page </a></p>
+	</div><!--main-content-->
+	<div id="main-content">
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Germany.png" width="40px" height="25px">
+		<p class="city"> Berlin</p>
+		<p class="country">, Germany</p>
+		<div class="dt">
+			<h2 id="Berlin_T_VA"></h2>
+			<p id="Berlin_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Italy.png" width="40px" height="25px">
+		<p class="city"> Rome</p>
+		<p class="country">, Italy</p>
+		<div class="dt">
+			<h2 id="Rome_T_VA"></h2>
+			<p id="Rome_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Czech_Republic.png" width="40px" height="25px">
+		<p class="city"> Prague</p>
+		<p class="country">, Czech Republic</p>
+		<div class="dt">
+			<h2 id="Prague_T_VA"></h2>
+			<p id="Prague_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Sweden.png" width="40px" height="25px">
+		<p class="city"> Stockholm</p>
+		<p class="country">, Sweden</p>
+		<div class="dt">
+			<h2 id="Stockholm_T_VA"></h2>
+			<p id="Stockholm_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/France.png" width="40px" height="25px">
+		<p class="city"> Paris</p>
+		<p class="country">, France</p>
+		<div class="dt">
+			<h2 id="Paris_T_VA"></h2>
+			<p id="Paris_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Turkey.png" width="40px" height="25px">
+		<p class="city"> Istanbul</p>
+		<p class="country">, Turkey</p>
+		<div class="dt">
+			<h2 id="Istanbul_T_VA"></h2>
+			<p id="Istanbul_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Spain.png" width="40px" height="25px">
+		<p class="city"> Madrid</p>
+		<p class="country">, Spain</p>
+		<div class="dt">
+			<h2 id="Madrid_T_VA"></h2>
+			<p id="Madrid_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/euorpe/Ukraine.png" width="40px" height="25px">
+		<p class="city"> Kiev</p>
+		<p class="country">, Ukraine</p>
+		<div class="dt">
+			<h2 id="Kiev_T_VA"></h2>
+			<p id="Kiev_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	</div><!--main_content-->
+	<script type="text/javascript">
+function tick() {
+	var unix_time = Date.now();
+	var current_time = new Date();
+	var diff = current_time.getTimezoneOffset();
+	var diff_miliseconds = diff*60*1000;
+	var current_utc = unix_time + diff_miliseconds;
+
+
+//europe.html
+
+var Berlin_T_VA= document.getElementById("Berlin_T_VA");
+var Berlin_D_VA= document.getElementById("Berlin_D_VA");
+var Berlin_CT = current_utc + (1*60*60*1000);
+var Berlin_Time = new Date(Berlin_CT).toString('hh:mm:ss tt');
+var Berlin_Date = new Date(Berlin_CT).toString('ddd, d MMM yyyy');
+Berlin_T_VA.innerHTML = Berlin_Time; 
+Berlin_D_VA.innerHTML = Berlin_Date; 
+
+
+var Rome_T_VA= document.getElementById("Rome_T_VA");
+var Rome_D_VA= document.getElementById("Rome_D_VA");
+var Rome_CT = current_utc + (1*60*60*1000);
+var Rome_Time = new Date(Rome_CT).toString('hh:mm:ss tt');
+var Rome_Date = new Date(Rome_CT).toString('ddd, d MMM yyyy');
+Rome_T_VA.innerHTML = Rome_Time; 
+Rome_D_VA.innerHTML = Rome_Date; 
+
+
+var Prague_T_VA= document.getElementById("Prague_T_VA");
+var Prague_D_VA= document.getElementById("Prague_D_VA");
+var Prague_CT = current_utc + (2*60*60*1000);
+var Prague_Time = new Date(Prague_CT).toString('hh:mm:ss tt');
+var Prague_Date = new Date(Prague_CT).toString('ddd, d MMM yyyy');
+Prague_T_VA.innerHTML = Prague_Time; 
+Prague_D_VA.innerHTML = Prague_Date; 
+
+
+var Stockholm_T_VA= document.getElementById("Stockholm_T_VA");
+var Stockholm_D_VA= document.getElementById("Stockholm_D_VA");
+var Stockholm_CT = current_utc + (2*60*60*1000);
+var Stockholm_Time = new Date(Stockholm_CT).toString('hh:mm:ss tt');
+var Stockholm_Date = new Date(Stockholm_CT).toString('ddd, d MMM yyyy');
+Stockholm_T_VA.innerHTML = Stockholm_Time; 
+Stockholm_D_VA.innerHTML = Stockholm_Date; 
+
+var Paris_T_VA= document.getElementById("Paris_T_VA");
+var Paris_D_VA= document.getElementById("Paris_D_VA");
+var Paris_CT = current_utc + (1*60*60*1000);
+var Paris_Time = new Date(Paris_CT).toString('hh:mm:ss tt');
+var Paris_Date = new Date(Paris_CT).toString('ddd, d MMM yyyy');
+Paris_T_VA.innerHTML = Paris_Time; 
+Paris_D_VA.innerHTML = Paris_Date; 
+
+
+var Istanbul_T_VA= document.getElementById("Istanbul_T_VA");
+var Istanbul_D_VA= document.getElementById("Istanbul_D_VA");
+var Istanbul_CT = current_utc + (3*60*60*1000);
+var Istanbul_Time = new Date(Istanbul_CT).toString('hh:mm:ss tt');
+var Istanbul_Date = new Date(Istanbul_CT).toString('ddd, d MMM yyyy');
+Istanbul_T_VA.innerHTML = Istanbul_Time; 
+Istanbul_D_VA.innerHTML = Istanbul_Date; 
+
+
+var Madrid_T_VA= document.getElementById("Madrid_T_VA");
+var Madrid_D_VA= document.getElementById("Madrid_D_VA");
+var Madrid_CT = current_utc + (2*60*60*1000);
+var Madrid_Time = new Date(Madrid_CT).toString('hh:mm:ss tt');
+var Madrid_Date = new Date(Madrid_CT).toString('ddd, d MMM yyyy');
+Madrid_T_VA.innerHTML = Madrid_Time; 
+Madrid_D_VA.innerHTML = Madrid_Date; 
+
+
+var Kiev_T_VA= document.getElementById("Kiev_T_VA");
+var Kiev_D_VA= document.getElementById("Kiev_D_VA");
+var Kiev_CT = current_utc + (3*60*60*1000);
+var Kiev_Time = new Date(Kiev_CT).toString('hh:mm:ss tt');
+var Kiev_Date = new Date(Kiev_CT).toString('ddd, d MMM yyyy');
+Kiev_T_VA.innerHTML = Kiev_Time; 
+Kiev_D_VA.innerHTML = Kiev_Date; 
+}
+
+	function get_current_time() {
+		 setInterval(tick, 1000);
+	}
+
+	window.onload = function () {
+		get_current_time();
+	};
+	</script>
+</body>
+</html>

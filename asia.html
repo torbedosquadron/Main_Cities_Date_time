@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Zone Viewer</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+	<script type="text/javascript" src="assets/scripts/date.js"></script>
+	<script type='text/javascript' src='assets/scripts/core.js'></script>
+    <script type='text/javascript' src='assets/scripts/parser.js'></script>
+    <script type='text/javascript' src='assets/scripts/en-US.js'></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</head>
+<body>
+	<div id="main-content">
+		<h1>Asia Main Cities</h1>
+		<p class="navi"><a href="index.html"> Main Page </a></p>
+	</div><!--main-content-->
+	<div id="main-content">
+	<div class="city_time_zone">
+		<img src="assets/images/asia/South_Korea.png" width="40px" height="25px">
+		<p class="city"> Seoul</p>
+		<p class="country">, South Korea</p>
+		<div class="dt">
+			<h2 id="Seoul_T_VA"></h2>
+			<p id="Seoul_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia/Philippines.png" width="40px" height="25px">
+		<p class="city"> Manila</p>
+		<p class="country">, Philippines</p>
+		<div class="dt">
+			<h2 id="Manila_T_VA"></h2>
+			<p id="Manila_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia/Pakistan.png" width="40px" height="25px">
+		<p class="city"> Karachi</p>
+		<p class="country">, Pakistan</p>
+		<div class="dt">
+			<h2 id="Karachi_T_VA"></h2>
+			<p id="Karachi_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia
+		/Indonesia.png" width="40px" height="25px">
+		<p class="city"> Jakarta</p>
+		<p class="country">, Indonesia</p>
+		<div class="dt">
+			<h2 id="Jakarta_T_VA"></h2>
+			<p id="Jakarta_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia/Bangladesh.png" width="40px" height="25px">
+		<p class="city"> Dhaka</p>
+		<p class="country">, Bangladesh</p>
+		<div class="dt">
+			<h2 id="Dhaka_T_VA"></h2>
+			<p id="Dhaka_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia/Iran.png" width="40px" height="25px">
+		<p class="city"> Tehran</p>
+		<p class="country">, Iran</p>
+		<div class="dt">
+			<h2 id="Tehran_T_VA"></h2>
+			<p id="Tehran_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/asia/Thailand.png" width="40px" height="25px">
+		<p class="city"> Bangkok</p>
+		<p class="country">, Thailand</p>
+		<div class="dt">
+			<h2 id="Bangkok_T_VA"></h2>
+			<p id="Bangkok_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	</div><!--main_content-->
+	<script type="text/javascript">
+function tick() {
+	var unix_time = Date.now();
+	var current_time = new Date();
+	var diff = current_time.getTimezoneOffset();
+	var diff_miliseconds = diff*60*1000;
+	var current_utc = unix_time + diff_miliseconds;
+
+var Seoul_T_VA= document.getElementById("Seoul_T_VA");
+var Seoul_D_VA= document.getElementById("Seoul_D_VA");
+var Seoul_CT = current_utc + (9*60*60*1000);
+var Seoul_Time = new Date(Seoul_CT).toString('hh:mm:ss tt');
+var Seoul_Date = new Date(Seoul_CT).toString('ddd, d MMM yyyy');
+Seoul_T_VA.innerHTML = Seoul_Time; 
+Seoul_D_VA.innerHTML = Seoul_Date; 
+
+
+var Manila_T_VA= document.getElementById("Manila_T_VA");
+var Manila_D_VA= document.getElementById("Manila_D_VA");
+var Manila_CT = current_utc + (8*60*60*1000);
+var Manila_Time = new Date(Manila_CT).toString('hh:mm:ss tt');
+var Manila_Date = new Date(Manila_CT).toString('ddd, d MMM yyyy');
+Manila_T_VA.innerHTML = Manila_Time; 
+Manila_D_VA.innerHTML = Manila_Date; 
+
+
+var Karachi_T_VA= document.getElementById("Karachi_T_VA");
+var Karachi_D_VA= document.getElementById("Karachi_D_VA");
+var Karachi_CT = current_utc + (5*60*60*1000);
+var Karachi_Time = new Date(Karachi_CT).toString('hh:mm:ss tt');
+var Karachi_Date = new Date(Karachi_CT).toString('ddd, d MMM yyyy');
+Karachi_T_VA.innerHTML = Karachi_Time; 
+Karachi_D_VA.innerHTML = Karachi_Date; 
+
+
+var Jakarta_T_VA= document.getElementById("Jakarta_T_VA");
+var Jakarta_D_VA= document.getElementById("Jakarta_D_VA");
+var Jakarta_CT = current_utc + (7*60*60*1000);
+var Jakarta_Time = new Date(Jakarta_CT).toString('hh:mm:ss tt');
+var Jakarta_Date = new Date(Jakarta_CT).toString('ddd, d MMM yyyy');
+Jakarta_T_VA.innerHTML = Jakarta_Time; 
+Jakarta_D_VA.innerHTML = Jakarta_Date; 
+
+
+var Dhaka_T_VA= document.getElementById("Dhaka_T_VA");
+var Dhaka_D_VA= document.getElementById("Dhaka_D_VA");
+var Dhaka_CT = current_utc + (6*60*60*1000);
+var Dhaka_Time = new Date(Dhaka_CT).toString('hh:mm:ss tt');
+var Dhaka_Date = new Date(Dhaka_CT).toString('ddd, d MMM yyyy');
+Dhaka_T_VA.innerHTML = Dhaka_Time; 
+Dhaka_D_VA.innerHTML = Dhaka_Date; 
+
+
+var Tehran_T_VA= document.getElementById("Tehran_T_VA");
+var Tehran_D_VA= document.getElementById("Tehran_D_VA");
+var Tehran_CT = current_utc + (3.5*60*60*1000);
+var Tehran_Time = new Date(Tehran_CT).toString('hh:mm:ss tt');
+var Tehran_Date = new Date(Tehran_CT).toString('ddd, d MMM yyyy');
+Tehran_T_VA.innerHTML = Tehran_Time; 
+Tehran_D_VA.innerHTML = Tehran_Date; 
+
+
+var Bangkok_T_VA= document.getElementById("Bangkok_T_VA");
+var Bangkok_D_VA= document.getElementById("Bangkok_D_VA");
+var Bangkok_CT = current_utc + (7*60*60*1000);
+var Bangkok_Time = new Date(Bangkok_CT).toString('hh:mm:ss tt');
+var Bangkok_Date = new Date(Bangkok_CT).toString('ddd, d MMM yyyy');
+Bangkok_T_VA.innerHTML = Bangkok_Time; 
+Bangkok_D_VA.innerHTML = Bangkok_Date; 
+}
+
+	function get_current_time() {
+		 setInterval(tick, 1000);
+	}
+
+	window.onload = function () {
+		get_current_time();
+	};
+	</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+html {
+	height: 100%; width:100%;margin: 0; padding: 0;
+}
+@font-face {
+	font-family: myfont; src: url("../fonts/LEELAWAD.TTF");
+}
+body {
+	height: 100%; width:100%;margin: 0; padding: 0; background: #218cd0; font:18px myfont; color: #ffffff;
+}
+a { color: #cccccc; }
+.highlighter {
+	background: #cb4b32;padding-top: 50px;padding-bottom: 50px; border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff;
+}
+.dt {
+	width: 200px;
+	float: right;
+	clear: both;
+	margin-top: 5px;
+
+}
+.dt h2{
+	margin: 0;
+	margin-bottom: 2px;
+	text-align: center;
+	font-size: 35px;
+	color: #ffffff;
+}
+.dt p{
+	width: 200px;
+	display: block;
+	margin: 0;
+	text-align: center;
+	font-size: 10px;
+	color: #cccccc;
+}
+.highlighter h1, h2, p {
+	text-align: center;
+}
+.Continent {
+	font:35px myfont;text-align: center;
+} 
+.Continent a {
+	text-decoration: none;
+}
+.Continent a:hover {
+	text-decoration: underline;
+}
+.top_cities {
+	font:50px myfont;text-align: center;padding-top: 10px;padding-bottom: 25px;
+}
+.city_time_zone {
+	padding-top: 25px;padding-bottom: 25px;
+}
+
+.city_time_zone img, p {
+	display: inline;
+}
+.city {
+	font:35px myfont;
+	color: #ffffff;
+}
+.country  {
+	font:25px myfont;
+	color: #cccccc;
+}
+.date_time {
+	font:25px myfont;position: absolute;right: 0;margin-bottom: 0;margin-top: 0;
+}
+.time {
+	font:40px myfont;
+}
+.date {
+	font:15px myfont;
+}
+.navi a{
+	text-decoration: none;
+}
+.navi a:hover{
+	text-decoration: underline;
+}
+#main-content {
+	width: 700px; margin: 25px auto; padding:10px 0 25px; background: #218cd0;position: relative;
+}
+#main-content h1, h2 {
+	 text-align: center; 
+}
+h1{
+	font:50px myfont;
+}
+h2 {
+	font:24px myfont;
+}
+
+hr { height: 0; border:0.5px solid #ffffff; }

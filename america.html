@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Zone Viewer</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+	<script type="text/javascript" src="assets/scripts/date.js"></script>
+	<script type='text/javascript' src='assets/scripts/core.js'></script>
+    <script type='text/javascript' src='assets/scripts/parser.js'></script>
+    <script type='text/javascript' src='assets/scripts/en-US.js'></script>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
+</head>
+<body>
+	<div id="main-content">
+		<h1>America  Main Cities</h1>
+		<p class="navi"><a href="index.html"> Main Page </a></p>
+	</div><!--main-content-->
+	<div id="main-content">
+	<div class="city_time_zone">
+		<img src="assets/images/america/United_States.png" width="40px" height="25px">
+		<p class="city"> Chicago</p>
+		<p class="country">, USA</p>
+		<div class="dt">
+			<h2 id="Chicago_T_VA"></h2>
+			<p id="Chicago_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Canada.png" width="40px" height="25px">
+		<p class="city"> Toronto</p>
+		<p class="country">, Canada</p>
+		<div class="dt">
+			<h2 id="Toronto_T_VA"></h2>
+			<p id="Toronto_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Mexico.png" width="40px" height="25px">
+		<p class="city"> Mexico City</p>
+		<p class="country">, Mexico</p>
+		<div class="dt">
+			<h2 id="Mexico_City_T_VA"></h2>
+			<p id="Mexico_City_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Chile.png" width="40px" height="25px">
+		<p class="city"> Santiago</p>
+		<p class="country">, Chile</p>
+		<div class="dt">
+			<h2 id="Santiago_T_VA"></h2>
+			<p id="Santiago_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Venezuela.png" width="40px" height="25px">
+		<p class="city"> Caracas</p>
+		<p class="country">, Venezuela</p>
+		<div class="dt">
+			<h2 id="Caracas_T_VA"></h2>
+			<p id="Caracas_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Argentina.png" width="40px" height="25px">
+		<p class="city"> Buenos Aires</p>
+		<p class="country">, Argentina</p>
+		<div class="dt">
+			<h2 id="Buenos_Aires_T_VA"></h2>
+			<p id="Buenos_Aires_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	<div class="city_time_zone">
+		<img src="assets/images/america/Guatemala.png" width="40px" height="25px">
+		<p class="city"> Guatemala</p>
+		<p class="country">, Guatemala</p>
+		<div class="dt">
+			<h2 id="Guatemala_T_VA"></h2>
+			<p id="Guatemala_D_VA"></p>
+		</div>
+	</div><!--city_time_zone-->
+	<hr>
+	</div><!--main_content-->
+
+	<script type="text/javascript">
+function tick() {
+	var unix_time = Date.now();
+	var current_time = new Date();
+	var diff = current_time.getTimezoneOffset();
+	var diff_miliseconds = diff*60*1000;
+	var current_utc = unix_time + diff_miliseconds;
+
+var Chicago_T_VA= document.getElementById("Chicago_T_VA");
+var Chicago_D_VA= document.getElementById("Chicago_D_VA");
+var Chicago_CT = current_utc + (-5*60*60*1000);
+var Chicago_Time = new Date(Chicago_CT).toString('hh:mm:ss tt');
+var Chicago_Date = new Date(Chicago_CT).toString('ddd, d MMM yyyy');
+Chicago_T_VA.innerHTML = Chicago_Time; 
+Chicago_D_VA.innerHTML = Chicago_Date; 
+
+
+var Toronto_T_VA= document.getElementById("Toronto_T_VA");
+var Toronto_D_VA= document.getElementById("Toronto_D_VA");
+var Toronto_CT = current_utc + (-4*60*60*1000);
+var Toronto_Time = new Date(Toronto_CT).toString('hh:mm:ss tt');
+var Toronto_Date = new Date(Toronto_CT).toString('ddd, d MMM yyyy');
+Toronto_T_VA.innerHTML = Toronto_Time; 
+Toronto_D_VA.innerHTML = Toronto_Date; 
+
+
+var Mexico_City_T_VA= document.getElementById("Mexico_City_T_VA");
+var Mexico_City_D_VA= document.getElementById("Mexico_City_D_VA");
+var Mexico_City_CT = current_utc + (-5*60*60*1000);
+var Mexico_City_Time = new Date(Mexico_City_CT).toString('hh:mm:ss tt');
+var Mexico_City_Date = new Date(Mexico_City_CT).toString('ddd, d MMM yyyy');
+Mexico_City_T_VA.innerHTML = Mexico_City_Time; 
+Mexico_City_D_VA.innerHTML = Mexico_City_Date;
+
+
+var Santiago_T_VA= document.getElementById("Santiago_T_VA");
+var Santiago_D_VA= document.getElementById("Santiago_D_VA");
+var Santiago_CT = current_utc + (-3*60*60*1000);
+var Santiago_Time = new Date(Santiago_CT).toString('hh:mm:ss tt');
+var Santiago_Date = new Date(Santiago_CT).toString('ddd, d MMM yyyy');
+Santiago_T_VA.innerHTML = Santiago_Time; 
+Santiago_D_VA.innerHTML = Santiago_Date;
+
+var Caracas_T_VA= document.getElementById("Caracas_T_VA");
+var Caracas_D_VA= document.getElementById("Caracas_D_VA");
+var Caracas_CT = current_utc + (-4.5*60*60*1000);
+var Caracas_Time = new Date(Caracas_CT).toString('hh:mm:ss tt');
+var Caracas_Date = new Date(Caracas_CT).toString('ddd, d MMM yyyy');
+Caracas_T_VA.innerHTML = Caracas_Time; 
+Caracas_D_VA.innerHTML = Caracas_Date;
+
+var Buenos_Aires_T_VA= document.getElementById("Buenos_Aires_T_VA");
+var Buenos_Aires_D_VA= document.getElementById("Buenos_Aires_D_VA");
+var Buenos_Aires_CT = current_utc + (-3*60*60*1000);
+var Buenos_Aires_Time = new Date(Buenos_Aires_CT).toString('hh:mm:ss tt');
+var Buenos_Aires_Date = new Date(Buenos_Aires_CT).toString('ddd, d MMM yyyy');
+Buenos_Aires_T_VA.innerHTML = Buenos_Aires_Time; 
+Buenos_Aires_D_VA.innerHTML = Buenos_Aires_Date;
+
+
+var Guatemala_T_VA= document.getElementById("Guatemala_T_VA");
+var Guatemala_D_VA= document.getElementById("Guatemala_D_VA");
+var Guatemala_CT = current_utc + (-6*60*60*1000);
+var Guatemala_Time = new Date(Guatemala_CT).toString('hh:mm:ss tt');
+var Guatemala_Date = new Date(Guatemala_CT).toString('ddd, d MMM yyyy');
+Guatemala_T_VA.innerHTML = Guatemala_Time; 
+Guatemala_D_VA.innerHTML = Guatemala_Date;
+}
+
+	function get_current_time() {
+		 setInterval(tick, 1000);
+	}
+
+	window.onload = function () {
+		get_current_time();
+	};
+	</script>
+</body>
+</html>
